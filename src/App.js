@@ -27,11 +27,7 @@ function BrothersDetails() {
       age: 23,
       address: "Vijayawada",
     },
-    {
-      name: "naresh",
-      age: 30,
-      address: "Vijayawada",
-    },{
+   {
       name: "suresh",
       age: 23,
       address: "Vijayawada",
