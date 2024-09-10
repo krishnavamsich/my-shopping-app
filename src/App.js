@@ -1,30 +1,56 @@
-import React, {useState} from 'react'
-import Child from './Child' 
-function App() {
+import React, { useState } from 'react';
+import Details from './Details';
+import './App.css'
+function BrothersDetails() {
   
-  const [brothers,setBrothers]= useState({
-     
+  const [brothers] = useState([
+    {
       name: "Vamsi",
       age: 23,
-      address: "vijayawada"
-  }
-  )
-  
-  const onHandle=()=>{
-    setBrothers({
-    name: "sai",
-    age: 25,
-    address: "Hyderabad"})}
+      address: "Vijayawada",
+    },
+    {
+      name: "bhanu",
+      age: 30,
+      address: "Vijayawada",
+    },{
+      name: "Vamsi",
+      age: 23,
+      address: "Vijayawada",
+    },
+    {
+      name: "nani",
+      age: 30,
+      address: "Hyderabad",
+    },    {
+      name: "Harish",
+      age: 23,
+      address: "Vijayawada",
+    },
+    {
+      name: "naresh",
+      age: 30,
+      address: "Vijayawada",
+    },{
+      name: "suresh",
+      age: 23,
+      address: "Vijayawada",
+    },
+    {
+      name: "ramesh",
+      age: 30,
+      address: "Hyderabad",
+    },
+  ]);
 
 
 
   return (
-    <div>
-     <h1>Name: {brothers.name}</h1>
-      <p>Age: {brothers.age}</p>
-      <p>Address: {brothers.address}</p>
-      <button onClick={onHandle}>Details</button>
-      <Child/>
+    <div className='container'>
+      
+      <Details brothers={brothers}/>
     </div>
-  )}
-export default App;
+  );
+}
+
+export default BrothersDetails;
