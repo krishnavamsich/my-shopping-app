@@ -5,9 +5,7 @@ import React,{useState} from 'react'
     const [currentBrothersIndex,setCurrentBrothersIndex]= useState(0)
     
     const handleNext =()=>{
-
-      
-        if(currentBrothersIndex+1 < brothers.length){
+            if(currentBrothersIndex+1 < brothers.length){
             setCurrentBrothersIndex (currentBrothersIndex + 1);
         }
       }

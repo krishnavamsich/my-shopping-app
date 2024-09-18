@@ -1,18 +1,10 @@
 const fetchData= async()=>{
-    const response=await fetch('https://dummyjson.com/products/add',{
+    const response=await fetch('https://dummyjson.com/products')
 
-     method:"POST",
-     headers:{'Content-Type':'application/json'},
-     body :JSON.stringify({title:'BMW Pencil',})
-
-    //  method:"PUT",
-    //  headers:{'Content-Type':'application/json'},
-    //  body :JSON.stringify({title:'iphone Galaxy +1 ',})
-
-    //  method:"DELETE",
-
-    })
-   try {
+//      method:"POST",
+//      headers:{'Content-Type':'application/json'},
+//      body :JSON.stringify({title:'BMW Pencil',})
+try{
         const products= await response.json();
         console.log(products);
    }
