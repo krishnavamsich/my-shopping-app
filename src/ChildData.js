@@ -16,30 +16,26 @@ import React,{useState} from 'react'
           setCurrentIndex(currentIndex - 1);
         }
       }
-      // const currentProduct = productDetails[currentIndex];
+      const currentProduct = productDetails[currentIndex];
 
   return (
     
     <div className='container'>
    { (
         <div>
-          <h2>Details:</h2>
-          <h2>{currentIndex.title}</h2>
-      <p>Description:{currentIndex.description}</p>
-      <p>Price: ${currentIndex.price}</p>
-      <p>Brand: {currentIndex.brand}</p>
+          <h2>Details</h2>
+          <h2>{currentProduct.title}</h2>
+        <p>Description: {currentProduct.description}</p>
+        <p>Price: ${currentProduct.price}</p>
+        <p>Brand: {currentProduct.brand}</p>
         </div>
       )}
 
-      {/* <button onClick={handleNext}>next</button>
-    <button onClick={handlePrevious}>Previous</button>  */}
-       <button onClick={handlePrevious} disabled={currentIndex === 0}>
-        Previous
-      </button>
-      <button onClick={handleNext} disabled={currentIndex === productDetails.length - 1}>
-        Next
-      </button>
+      <button onClick={handleNext}>next</button>
+    <button onClick={handlePrevious}>Previous</button> 
+      
     </div>
   )
 }
 export default ChildData;
+
