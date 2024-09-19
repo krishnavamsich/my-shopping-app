@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react'
-import FetchingChildData from './fetchingChildData'
-
+// import FetchingChildData from './FetchingChildData'
+import ChildData from './ChildData'
  function Data() {
 const[productDetails,setProductDetails]=useState([]);
 
@@ -22,8 +22,8 @@ FetchData();
   return (
     <div>
         <h1>hii</h1>
-        {/* {productDetails.map(product => <div>{product?.brand || 'NoBrand'} - {product.stock} - {product.weight}</div>)} */}
-      <FetchingChildData productDetails={setProductDetails}/>
+      <ChildData productDetails={productDetails}/>
+    
     </div>
   )
 }

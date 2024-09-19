@@ -1,7 +1,7 @@
 
 import React,{useState} from 'react'
 
- function FetchingChildData({productDetails}) {
+ function ChildData({productDetails}) {
 
     const [currentIndex,setCurrentIndex]= useState(0);
     
@@ -42,4 +42,4 @@ import React,{useState} from 'react'
     </div>
   )
 }
-export default FetchingChildData;
+export default ChildData;
