@@ -1,52 +1,29 @@
-// import React, { useState } from 'react';
-// import Details from './Details';
-// import './App.css'
-// function BrothersDetails() {
-  
-//   const [brothers] = useState([
-//     {
-//       name: "Vamsi",
-//       age: 23,
-//       address: "Vijayawada",
-//     },
-//     {
-//       name: "bhanu",
-//       age: 30,
-//       address: "Vijayawada",
-//     },{
-//       name: "Vamsi",
-//       age: 23,
-//       address: "Vijayawada",
-//     },
-//     {
-//       name: "nani",
-//       age: 30,
-//       address: "Hyderabad",
-//     },    {
-//       name: "Harish",
-//       age: 23,
-//       address: "Vijayawada",
-//     },
-//    {
-//       name: "suresh",
-//       age: 23,
-//       address: "Vijayawada",
-//     },
-//     {
-//       name: "ramesh",
-//       age: 30,
-//       address: "Hyderabad",
-//     },
-//   ]);
+import React, { useState, useEffect } from "react";
+import ChildData from "./ChildData.js";
 
+function Data() {
+  const [productDetails, setProductDetails] = useState([]);
 
+  useEffect(() => {
+    const FetchData = async () => {
+      try {
+        const response = await fetch("https://dummyjson.com/products");
+        const data = await response.json();
+        console.log(data);
+        setProductDetails(data.products);
+      } catch (error) {
+        console.log("error");
+      }
+    };
+    FetchData();
+  }, []);
 
-//   return (
-//     <div className='container'>
-      
-//       <Details brothers={brothers}/>
-//     </div>
-//   );
-// }
+  return (
+    <div>
+      <h1>Details</h1>
+      <div>{<ChildData productDetails={productDetails} />}</div>
+    </div>
+  );
+}
 
-// export default BrothersDetails;
+export default Data;
